@@ -1,0 +1,18 @@
+.s1
+{
+justify-content:center;
+display:flex;
+
+     }
+.s2
+{
+border-collapse:collapse;
+text-align:center;
+background-color:yellow;
+}
+.s3
+{
+border-collapse:separate;
+text-align:center;
+background-color:pink;
+}

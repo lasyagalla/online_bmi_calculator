@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI_CALC</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+</head>
+<body class="s1">
+<form class="pure-form" method="post" action="/">
+<table class="s2">
+    <th>BMI CALCULATOR</th>
+        <tr>
+        <td><label>Enter Weight: </label><input type="text" name="w1"><label>Kgs</label></td>
+        </tr>
+        <tr>
+            <td><label>Enter height: </label><input type="text" name="w2"><label>m<sup>2</sup></label></td>
+        </tr>
+        <tr>
+            {% if bmi %}
+            <td><label>Your BMI is:</label><input type="text" value="{{bmi}}" onclick="clickme()"></td>
+            {% endif %}
+        </tr>
+    <tr>
+        <td><button  class="pure-button pure-button-primary" type="submit" >SUBMIT</button></td>
+    </tr>
+    <tr>
+        <table class="s3" aria-rowspan="2">
+            <th>VALUE</th><th>BMI INDICATES THAT YOU ARE:</th>
+            <tr>
+                <td><label><18.5</label></td>
+                <td><label>UNDERWEIGHT</label></td>
+            </tr>
+             <tr>
+                <td><label>18.5 TO 24.9</label></td>
+                <td><label>NORMAL</label></td>
+            </tr>
+             <tr>
+                <td><label>25 TO 29.9</label></td>
+                <td><label>OVERWEIGHT</label></td>
+            </tr>
+             <tr>
+                <td><label>>30</label></td>
+                <td><label>OBESITY</label></td>
+            </tr>
+        </table>
+    </tr>
+</table>
+</form>
+<script>
+    function clickme()
+    {
+    alert('Your BMI is:{{bmi}} which is {{bmi1}}')
+    }
+</script>
+</body>
+</html>
